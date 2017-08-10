@@ -28,7 +28,7 @@
 #include <errno.h>
 #include <unistd.h>
 #include <fcntl.h>
-#include <linux/videodev.h>
+#include <linux/videodev2.h>
 #include <sys/mman.h>
 #include <sys/ioctl.h>
 #include "v4l2uvc.h"

@@ -29,7 +29,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
-#include <jpeglib.h>
+//#include <jpeglib.h>
 #include <time.h>
 #include <linux/videodev2.h>
 #include <pthread.h>
@@ -59,6 +59,7 @@ void updatePixelFull(uint16_t value, uint8_t x, uint8_t y, uint8_t camera);
 static uint16_t previousValues[CAMERAS][W][H][D][V];
 static uint16_t currentValues[CAMERAS][W][H];
 
+static uint8_t  pixel_alerts[CAMERAS][W][H];
 static uint16_t MADArray[CAMERAS][D];
 static uint8_t alertCount;
 
@@ -95,9 +96,11 @@ void updatePixel(uint16_t value, uint8_t x, uint8_t y, uint8_t camera){
 	}
 	
 }
-float calculateMAD(uint8_t x, uint8_t y, uint16_t median, uint8_t index, uint8_t camera){
+int calculateMAD(uint8_t x, uint8_t y, uint16_t median, uint8_t index, uint8_t camera){
 	uint8_t i, j;
 	int16_t diff;
+        uint8_t mid;
+        mid = index/2;
 	for(i = 0; i < index; i++){
 		diff = previousValues[camera][x][y][i][0] - pixels[camera][x][y].median;
 		if(diff < 0){
@@ -116,10 +119,11 @@ float calculateMAD(uint8_t x, uint8_t y, uint16_t median, uint8_t index, uint8_t
 		}
 	}
 	//return the median
-	if (MADArray[camera][(index>>1)] == 0){
-		return 0.5;
+
+	if (MADArray[camera][mid] == 0){
+		return 1;
 	}
-	return (float)MADArray[camera][index>>1];
+	return MADArray[camera][mid];
 }
 void updatePixelFilling(uint16_t value, uint8_t x, uint8_t y, uint8_t camera){
 	uint8_t low, mid, high, j;
@@ -159,7 +163,7 @@ void updatePixelFilling(uint16_t value, uint8_t x, uint8_t y, uint8_t camera){
 	pixel->mean = (pixel->mean*(pixel->index-1) + value)/pixel->index;
 	pixel->median = previousValues[camera][x][y][(pixel->index)>>1][0];
 	pixel->stdDev = calculateMAD(x, y, pixel->median, pixel->index, camera) / MAGIC;
-	
+
 }
 
 void updatePixelFull(uint16_t value, uint8_t x, uint8_t y, uint8_t camera){
@@ -221,20 +225,29 @@ void updatePixelFull(uint16_t value, uint8_t x, uint8_t y, uint8_t camera){
 	previousValues[camera][x][y][mid][0] = value;
 	previousValues[camera][x][y][mid][1] = D;
 	
-	pixel->mean = (currentTotal + value) >> 5;;
+	pixel->mean = (currentTotal + value) >> 5;
 	pixel->median = previousValues[camera][x][y][15][0];
-	calculateMAD(x, y, pixel->median, 32, camera);
-	pixel->stdDev = MADArray[camera][16]/ MAGIC;
+	pixel->stdDev = calculateMAD(x, y, pixel->median, 32, camera);
+
 }
 void updateAndCheck(uint8_t camera){
 	uint8_t i, j;
 	alertCount = 0;
+        uint8_t alert = 0;
 	for(i = 0; i < W; i++){
 		for(j = 0; j < H; j++){
-			if(testValue(currentValues[camera][i][j], i, j, camera)){
+			alert = testValue(currentValues[camera][i][j], i, j, camera);
+			if(alert){
 				alertCount++;
 			}
-			updatePixel(currentValues[camera][i][j], i, j, camera);
+			if(!alert || (pixels[camera][i][j].index < (D-1)))
+			{
+			   updatePixel(currentValues[camera][i][j], i, j, camera);
+                           pixel_alerts[camera][i][j] = 1;
+			}
+			else{
+			  pixel_alerts[camera][i][j] = 0;
+			}
 		}
 	}
 }
@@ -305,8 +318,10 @@ void
 	uint16_t value;
 	int count = 0;
 	clock_t times[CAMERAS];
+        time_t  seconds[CAMERAS];
 	int index_1, index_2, index;
 	int run = 1;
+
 	/*
 	FILE *f1 = fopen('output0.txt', 'w');
 	FILE *f2 = fopen('output2.txt', 'w');
@@ -348,14 +363,17 @@ void
 			i = 0; 
 			j = 0;
 			k = index_1;
+			//printf("\n");
+			times[c] = clock();
+                        seconds[c] = time(NULL);
+
 			while(k <= index_2){
-				value = (uint16_t)(videoIn[c]->framebuffer[2*k] + (videoIn[c]->framebuffer[2*k+1]<<8));
+				value = (uint16_t)((videoIn[c]->framebuffer[2*k] + (videoIn[c]->framebuffer[2*k+1]<<8)));
 				k++;
-				//printf("%i\n", value);
+				printf("Camera %i index %i %i value %i stats %f %i %f time %ld %u %i\n",c, i, j, value, pixels[c][i][j].mean, pixels[c][i][j].median, pixels[c][i][j].stdDev, seconds[c], times[c], pixel_alerts[c][i][j]);
 				currentValues[c][i][j] = value;
 				i++;
 				index++;
-				
 				if((k - index_1) == W){
 					index_1+=160;
 					k = index_1;
@@ -363,15 +381,19 @@ void
 					j++;
 				}
 			}
+
 			times[c] = clock();
-			if(c == 0){
-				printf("TIME %i\n", times[c]);
-			}
+                        seconds[c] = time(NULL);
 		}
 		for(c = 0; c < cameras; c++){
 			updateAndCheck(c);
-			if(alertCount > 20 && pixels[c][0][0].index == D){
-				//printf("INTRUSION %s %u %i\n", devices[c], times[c], alertCount);
+			if(alertCount > 27 && pixels[c][0][0].index == D){
+				printf("INTRUSION %i %ld %u %i\n", c, seconds[c],times[c], alertCount);
+                                /*for(i = 0; i < 6; i++){
+					for(j = 0; j < 6; j++){
+						printf("Pixel %i %i mean %f stdDev %f nV %u\n", i, j, pixels[c][i][j].mean, pixels[c][i][j].stdDev, currentValues[c][i][j]); 
+					}
+				}*/
 				//printArray(c);
 				//printMAD(c);
 				//printf("\n\n");
@@ -379,11 +401,11 @@ void
 		}
 		count++;
 		//run = 0;
-	}	
+	}
 }
 int
 main (int argc, char *argv[])
 {
 	//doesn't return
-	cameras(2);
+	cameras(4);
 }
