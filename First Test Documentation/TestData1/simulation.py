@@ -13,17 +13,20 @@ w = 6
 h = 6
 #number of samples kept at a given time (use 32 or 64 for the bit shifting?)
 d = 32 
-
+DataSize = 5000
+         
+with open('elevenforty.txt') as f:
+   lines = f.readlines()
 magic_number = 0.6745
 prev_values = np.zeros((4,6,6,32,3))#Matrix to hold previous values
 medians = np.zeros((4,6,6))
 means =  np.zeros((4,6,6))
-alert_count = np.zeros((4,6,6, 153))
-alert_total = np.zeros((4, 153))
-trigger = np.zeros((4, 153))
+alert_count = np.zeros((4,6,6, DataSize))
+alert_total = np.zeros((4, DataSize))
+trigger = np.zeros((4, DataSize))
 median_array = np.zeros((32))
 
-means = np.zeros((4, 6, 6, 153))
+means = np.zeros((4, 6, 6, DataSize))
 accountants = []
 class accountant:
    def __init__(self, x, y):
@@ -44,6 +47,14 @@ class accountant:
          if value > (self.mean + 6*self.std_dev):
             return 1
          elif value < (self.mean - 6*self.std_dev):
+            return 1
+      return 0
+      
+   def test_range(self, value):
+      if self.index >= d:
+         if value > (self.mean + 30):
+            return 1
+         elif value < (self.mean - 30):
             return 1
       return 0
       
@@ -134,21 +145,22 @@ def add_sorted_good(i, j, camera,  value, time):
    if accountants[36*camera+j*w+i].test_value(value):
       alert_count[camera][i][j][k] += 1
       alert_total[camera][k] += 1
-   if (accountants[36*camera+j*w+i].test_value(value) == 0) or (accountants[36*camera+j*w+i].getIndex() < d):
+   if (accountants[36*camera+j*w+i].test_range(value) == 0) or (accountants[36*camera+j*w+i].getIndex() < d):
       accountants[36*camera+j*w+i].add_value(camera, value, time)
 #declare accountants
 for c in range(4):
    for x in range(0, w): 
          for y in range(0, h): 
             accountants.append(accountant(x, y))
-            
-with open('AllTestGood.txt') as f:
-   lines = f.readlines()
+
    
-Data = np.zeros((4,6,6,153))
-Int = np.zeros((4, 153))
+Data = np.zeros((4,6,6,DataSize))
+Int = np.zeros((4, DataSize))
 SimData = np.zeros((4, 6, 6, 32))
-x = range(0, 153)
+alerts = np.zeros((4, 6, 6, DataSize))
+std = np.zeros((4, 6, 6, DataSize))
+alertCount = np.zeros((4, DataSize))
+x = range(0, DataSize)
 count = 0
 index = 0
 for line in lines:
@@ -158,12 +170,17 @@ for line in lines:
       time = 0
       i = int(exploded[3])
       j = int(exploded[4])
-      value = int(exploded[6])
+      if len(exploded) > 6:
+         value = int(exploded[6])
       if len(exploded) > 8:
          mean = float(exploded[8])
          means[camera][i][j][index] = mean
       if len(exploded) > 13:
          time = exploded[13]
+      if len(exploded) > 14:
+         alertCount[camera][index] += int(exploded[14])
+         std[camera][i][j][index] = float(exploded[10])
+         
       #print camera, i, j, value
       #print , , , , stats float(exploded[8]), int(exploded[9]), float(exploded[10])
       Data[camera][i][j][index] = value
@@ -175,7 +192,8 @@ for line in lines:
    elif exploded[0] == 'INTRUSION':
       Int[int(exploded[1])][index] = 1
 threshold = 30
-for k in range(0, 153):
+'''
+for k in range(0, DataSize):
    #process the data frame by frame
    #print k
    for c in range(0, 4):
@@ -205,20 +223,26 @@ for k in range(0, 153):
    #print prev_values[0][0][0]
    #print '\n'
 #print Data[0][3][3]
+'''
 plt.figure(1)
 s = plt.subplot(221)
-plt.plot(x, alert_total[0], 'r--')
-plt.plot(x, alert_total[1], 'g--')
-plt.plot(x, alert_total[2], 'b--')
-plt.plot(x, alert_total[3], 'y--')
+#plt.plot(x, alert_total[0], 'r--')
+#plt.plot(x, alert_total[1], 'g--')
+#plt.plot(x, alert_total[2], 'b--')
+#plt.plot(x, alert_total[3], 'y--')
+plt.plot(x, alertCount[0], 'r')
+plt.plot(x, alertCount[1], 'g')
+plt.plot(x, alertCount[2], 'b')
+plt.plot(x, alertCount[3], 'y')
 s.set_title('Number of pixels detected as changed per Sample')
 s = plt.subplot(222)
-plt.plot(x, trigger[0], 'r-')
-plt.plot(x, trigger[1], 'go')
-plt.plot(x, trigger[2], 'b-')
-plt.plot(x, trigger[3], 'yo')
-s.set_title('Simulation detection per Sample')
+plt.plot(x, std[0][3][3], 'r-')
+plt.plot(x, std[1][3][3], 'g-')
+plt.plot(x, std[2][3][3], 'b-')
+plt.plot(x, std[3][3][3], 'y-')
+s.set_title('Standard Deviation')
 s = plt.subplot(223)
+
 plt.plot(x, Data[0][3][3], 'r--')
 plt.plot(x, Data[1][3][3], 'g--')
 plt.plot(x, Data[2][3][3], 'b--')
@@ -227,11 +251,13 @@ plt.plot(x, means[0][3][3], 'r')
 plt.plot(x, means[1][3][3], 'g')
 plt.plot(x, means[2][3][3], 'b')
 plt.plot(x, means[3][3][3], 'y')
-s.set_title('IR Data (--) and running average (-) per Sample')
+#plt.title('IR Data (--) and running average (-) per Sample')
+
 s = plt.subplot(224)
 plt.plot(x, Int[0], 'r')
 plt.plot(x, Int[1], 'g')
 plt.plot(x, Int[2], 'b')
 plt.plot(x, Int[3], 'y')
 s.set_title('Measured detection per Sample')
+
 plt.show()
