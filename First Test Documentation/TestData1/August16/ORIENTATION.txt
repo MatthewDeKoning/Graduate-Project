@@ -1,8 +1,0 @@
-    car
-
-
-*    *  *     *
-      M
-
-Position of cameras relative to monitor
-0, 1, 2, 3
