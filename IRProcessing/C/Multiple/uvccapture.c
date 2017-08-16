@@ -87,6 +87,19 @@ uint8_t testValue(uint16_t value, uint8_t x, uint8_t y, uint8_t camera){
 	return 0;
 }
 
+uint8_t testRange(uint16_t value, uint8_t x, uint8_t y, uint8_t camera){
+	float upper, lower, sixStdDev;
+	upper = pixels[camera][x][y].mean + 30;
+	lower = pixels[camera][x][y].mean - 30;
+	if(value > upper){
+		return 0;
+	}
+	else if(value < lower){
+		return 0;
+	}
+	return 1;
+}
+
 void updatePixel(uint16_t value, uint8_t x, uint8_t y, uint8_t camera){
 	if(pixels[camera][x][y].index == D){
 		updatePixelFull(value, x, y, camera);
@@ -240,7 +253,7 @@ void updateAndCheck(uint8_t camera){
 			if(alert){
 				alertCount++;
 			}
-			if(!alert || (pixels[camera][i][j].index < (D-1)))
+			if(testRange(currentValues[camera][i][j], i, j, camera) || (pixels[camera][i][j].index < (D-1)))
 			{
 			   updatePixel(currentValues[camera][i][j], i, j, camera);
                            pixel_alerts[camera][i][j] = 1;
