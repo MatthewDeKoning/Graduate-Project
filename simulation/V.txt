@@ -1,0 +1,1243 @@
+Simulation Parameters
+Distance Range (ft): 25 min, 40 max, 1 step
+Velocity Range (ft/s): 5 min, 15 max, 1 step
+Width Range (ft): 8 min, 8 max, 1 step
+L1 (ft): 5.0 L2: 1.0 L3: 1.0 L4: 5.0
+A1 (degrees): 105.0 A2: 130.0 A3: 130.0 A4: 105.0
+FPS 9
+-----------------------------------------
+d = 25
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 6.925 avg v err = 0.132 v max error = 0.237 v min error = 0.047
+misses = 0
+
+d = 26
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 6.927 avg v err = 0.15 v max error = 0.334 v min error = 0.071
+misses = 0
+
+d = 27
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.015 avg v err = 0.119 v max error = 0.313 v min error = 0.009
+misses = 0
+
+d = 28
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 6.987 avg v err = 0.124 v max error = 0.196 v min error = 0.003
+misses = 0
+
+d = 29
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 6.915 avg v err = 0.175 v max error = 0.294 v min error = 0.119
+misses = 0
+
+d = 30
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 6.955 avg v err = 0.15 v max error = 0.4 v min error = 0.053
+misses = 0
+
+d = 31
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 6.947 avg v err = 0.151 v max error = 0.338 v min error = 0.041
+misses = 0
+
+d = 32
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.044 avg v err = 0.136 v max error = 0.221 v min error = 0.016
+misses = 0
+
+d = 33
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 6.885 avg v err = 0.217 v max error = 0.41 v min error = 0.088
+misses = 0
+
+d = 34
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 6.963 avg v err = 0.182 v max error = 0.382 v min error = 0.008
+misses = 0
+
+d = 35
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 6.95 avg v err = 0.074 v max error = 0.212 v min error = 0.033
+misses = 0
+
+d = 36
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.059 avg v err = 0.256 v max error = 0.404 v min error = 0.057
+misses = 0
+
+d = 37
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 6.814 avg v err = 0.389 v max error = 0.585 v min error = 0.131
+misses = 0
+
+d = 38
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 6.918 avg v err = 0.093 v max error = 0.269 v min error = 0.011
+misses = 0
+
+d = 39
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 6.944 avg v err = 0.177 v max error = 0.51 v min error = 0.001
+misses = 0
+
+d = 40
+w = 8
+v = 7
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.003 avg v err = 0.163 v max error = 0.303 v min error = 0.013
+misses = 0
+
+d = 25
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.885 avg v err = 0.408 v max error = 0.879 v min error = 0.138
+misses = 0
+
+d = 26
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.877 avg v err = 0.144 v max error = 0.364 v min error = 0.017
+misses = 0
+
+d = 27
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.975 avg v err = 0.371 v max error = 0.636 v min error = 0.033
+misses = 0
+
+d = 28
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.975 avg v err = 0.148 v max error = 0.327 v min error = 0.049
+misses = 0
+
+d = 29
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.972 avg v err = 0.206 v max error = 0.327 v min error = 0.056
+misses = 0
+
+d = 30
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.792 avg v err = 0.333 v max error = 0.761 v min error = 0.04
+misses = 0
+
+d = 31
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.845 avg v err = 0.162 v max error = 0.45 v min error = 0.008
+misses = 0
+
+d = 32
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 8.007 avg v err = 0.272 v max error = 0.526 v min error = 0.008
+misses = 0
+
+d = 33
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.859 avg v err = 0.251 v max error = 0.7 v min error = 0.099
+misses = 0
+
+d = 34
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.947 avg v err = 0.194 v max error = 0.507 v min error = 0.055
+misses = 0
+
+d = 35
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.94 avg v err = 0.189 v max error = 0.454 v min error = 0.071
+misses = 0
+
+d = 36
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.97 avg v err = 0.159 v max error = 0.436 v min error = 0.034
+misses = 0
+
+d = 37
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.888 avg v err = 0.179 v max error = 0.456 v min error = 0.018
+misses = 0
+
+d = 38
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.8 avg v err = 0.275 v max error = 0.576 v min error = 0.118
+misses = 0
+
+d = 39
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.892 avg v err = 0.271 v max error = 0.59 v min error = 0.108
+misses = 0
+
+d = 40
+w = 8
+v = 8
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 7.918 avg v err = 0.221 v max error = 0.404 v min error = 0.03
+misses = 0
+
+d = 25
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.746 avg v err = 0.348 v max error = 1.024 v min error = 0.046
+misses = 0
+
+d = 26
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.81 avg v err = 0.669 v max error = 1.174 v min error = 0.215
+misses = 0
+
+d = 27
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.78 avg v err = 0.22 v max error = 0.708 v min error = 0.004
+misses = 0
+
+d = 28
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.953 avg v err = 0.28 v max error = 0.816 v min error = 0.004
+misses = 0
+
+d = 29
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.773 avg v err = 0.282 v max error = 0.91 v min error = 0.053
+misses = 0
+
+d = 30
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.813 avg v err = 0.556 v max error = 1.251 v min error = 0.078
+misses = 0
+
+d = 31
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.745 avg v err = 0.325 v max error = 0.793 v min error = 0.087
+misses = 0
+
+d = 32
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.886 avg v err = 0.579 v max error = 0.992 v min error = 0.127
+misses = 0
+
+d = 33
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.695 avg v err = 0.327 v max error = 0.835 v min error = 0.036
+misses = 0
+
+d = 34
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.844 avg v err = 0.299 v max error = 0.717 v min error = 0.036
+misses = 0
+
+d = 35
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.736 avg v err = 0.39 v max error = 1.032 v min error = 0.011
+misses = 0
+
+d = 36
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.885 avg v err = 0.461 v max error = 0.898 v min error = 0.179
+misses = 0
+
+d = 37
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.75 avg v err = 0.32 v max error = 0.759 v min error = 0.063
+misses = 0
+
+d = 38
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.729 avg v err = 0.336 v max error = 0.939 v min error = 0.063
+misses = 0
+
+d = 39
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.915 avg v err = 0.366 v max error = 0.639 v min error = 0.112
+misses = 0
+
+d = 40
+w = 8
+v = 10
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 9.763 avg v err = 0.401 v max error = 0.98 v min error = 0.137
+misses = 0
+
+d = 25
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.703 avg v err = 0.479 v max error = 1.252 v min error = 0.006
+misses = 0
+
+d = 26
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.633 avg v err = 0.494 v max error = 1.451 v min error = 0.037
+misses = 0
+
+d = 27
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.792 avg v err = 0.34 v max error = 0.903 v min error = 0.066
+misses = 0
+
+d = 28
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.784 avg v err = 0.455 v max error = 1.197 v min error = 0.096
+misses = 0
+
+d = 29
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.698 avg v err = 0.438 v max error = 0.954 v min error = 0.103
+misses = 0
+
+d = 30
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.675 avg v err = 0.464 v max error = 0.979 v min error = 0.103
+misses = 0
+
+d = 31
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.591 avg v err = 0.541 v max error = 1.369 v min error = 0.042
+misses = 0
+
+d = 32
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.764 avg v err = 0.51 v max error = 1.214 v min error = 0.042
+misses = 0
+
+d = 33
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.521 avg v err = 0.58 v max error = 1.415 v min error = 0.012
+misses = 0
+
+d = 34
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.753 avg v err = 0.419 v max error = 1.261 v min error = 0.019
+misses = 0
+
+d = 35
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.728 avg v err = 0.426 v max error = 1.285 v min error = 0.048
+misses = 0
+
+d = 36
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.715 avg v err = 0.285 v max error = 1.103 v min error = 0.048
+misses = 0
+
+d = 37
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.61 avg v err = 0.469 v max error = 1.151 v min error = 0.108
+misses = 0
+
+d = 38
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.556 avg v err = 0.468 v max error = 1.151 v min error = 0.122
+misses = 0
+
+d = 39
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.729 avg v err = 0.452 v max error = 0.795 v min error = 0.167
+misses = 0
+
+d = 40
+w = 8
+v = 11
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 10.888 avg v err = 0.539 v max error = 1.393 v min error = 0.06
+misses = 0
+
+d = 25
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.754 avg v err = 0.662 v max error = 1.613 v min error = 0.123
+misses = 0
+
+d = 26
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.42 avg v err = 0.833 v max error = 2.114 v min error = 0.08
+misses = 0
+
+d = 27
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.425 avg v err = 0.592 v max error = 1.645 v min error = 0.08
+misses = 0
+
+d = 28
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.314 avg v err = 0.829 v max error = 1.678 v min error = 0.317
+misses = 0
+
+d = 29
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.829 avg v err = 0.776 v max error = 1.463 v min error = 0.324
+misses = 0
+
+d = 30
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.545 avg v err = 0.567 v max error = 1.463 v min error = 0.046
+misses = 0
+
+d = 31
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.517 avg v err = 0.779 v max error = 1.773 v min error = 0.088
+misses = 0
+
+d = 32
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.503 avg v err = 0.731 v max error = 1.773 v min error = 0.13
+misses = 0
+
+d = 33
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.171 avg v err = 0.868 v max error = 2.037 v min error = 0.13
+misses = 0
+
+d = 34
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.705 avg v err = 0.49 v max error = 1.043 v min error = 0.149
+misses = 0
+
+d = 35
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.458 avg v err = 0.563 v max error = 1.594 v min error = 0.106
+misses = 0
+
+d = 36
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.854 avg v err = 0.719 v max error = 1.161 v min error = 0.106
+misses = 0
+
+d = 37
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.3 avg v err = 0.928 v max error = 2.126 v min error = 0.395
+misses = 0
+
+d = 38
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.178 avg v err = 0.83 v max error = 2.155 v min error = 0.021
+misses = 0
+
+d = 39
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.384 avg v err = 0.686 v max error = 1.69 v min error = 0.021
+misses = 0
+
+d = 40
+w = 8
+v = 13
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.514 avg v err = 0.869 v max error = 2.184 v min error = 0.021
+misses = 0
+
+d = 25
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.696 avg v err = 0.768 v max error = 1.42 v min error = 0.094
+misses = 0
+
+d = 26
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.264 avg v err = 0.872 v max error = 2.064 v min error = 0.142
+misses = 0
+
+d = 27
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.714 avg v err = 1.169 v max error = 2.517 v min error = 0.231
+misses = 0
+
+d = 28
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.335 avg v err = 0.93 v max error = 1.825 v min error = 0.181
+misses = 0
+
+d = 29
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.444 avg v err = 0.821 v max error = 1.862 v min error = 0.181
+misses = 0
+
+d = 30
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.086 avg v err = 1.205 v max error = 2.135 v min error = 0.52
+misses = 0
+
+d = 31
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.344 avg v err = 0.86 v max error = 2.429 v min error = 0.082
+misses = 0
+
+d = 32
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 14.09 avg v err = 0.802 v max error = 1.317 v min error = 0.082
+misses = 0
+
+d = 33
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 12.926 avg v err = 1.074 v max error = 2.205 v min error = 0.378
+misses = 0
+
+d = 34
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.222 avg v err = 0.996 v max error = 2.773 v min error = 0.017
+misses = 0
+
+d = 35
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.858 avg v err = 1.019 v max error = 1.728 v min error = 0.364
+misses = 0
+
+d = 36
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.514 avg v err = 1.334 v max error = 2.119 v min error = 0.469
+misses = 0
+
+d = 37
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.337 avg v err = 1.031 v max error = 2.594 v min error = 0.113
+misses = 0
+
+d = 38
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.02 avg v err = 1.327 v max error = 2.342 v min error = 0.658
+misses = 0
+
+d = 39
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.715 avg v err = 1.093 v max error = 3.022 v min error = 0.209
+misses = 0
+
+d = 40
+w = 8
+v = 14
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 13.76 avg v err = 0.713 v max error = 1.514 v min error = 0.161
+misses = 0
+
+d = 25
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 16.211 avg v err = 0.694 v max error = 1.102 v min error = 0.211
+misses = 0
+
+d = 26
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 14.662 avg v err = 1.607 v max error = 2.703 v min error = 1.212
+misses = 0
+
+d = 27
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 16.452 avg v err = 1.924 v max error = 3.244 v min error = 0.21
+misses = 0
+
+d = 28
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 15.668 avg v err = 0.681 v max error = 1.997 v min error = 0.145
+misses = 0
+
+d = 29
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 14.979 avg v err = 1.507 v max error = 3.113 v min error = 0.395
+misses = 0
+
+d = 30
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 16.04 avg v err = 0.827 v max error = 1.777 v min error = 0.145
+misses = 0
+
+d = 31
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 15.344 avg v err = 0.663 v max error = 2.094 v min error = 0.016
+misses = 0
+
+d = 32
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 14.927 avg v err = 1.286 v max error = 2.834 v min error = 0.016
+misses = 0
+
+d = 33
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 15.983 avg v err = 0.821 v max error = 1.769 v min error = 0.048
+misses = 0
+
+d = 34
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 14.899 avg v err = 1.101 v max error = 2.542 v min error = 0.111
+misses = 0
+
+d = 35
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 15.002 avg v err = 1.333 v max error = 2.92 v min error = 0.383
+misses = 0
+
+d = 36
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 16.162 avg v err = 1.04 v max error = 2.237 v min error = 0.111
+misses = 0
+
+d = 37
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 14.82 avg v err = 1.18 v max error = 2.284 v min error = 0.693
+misses = 0
+
+d = 38
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 14.863 avg v err = 1.237 v max error = 2.676 v min error = 0.236
+misses = 0
+
+d = 39
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 15.865 avg v err = 0.962 v max error = 2.331 v min error = 0.184
+misses = 0
+
+d = 40
+w = 8
+v = 16
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 15.328 avg v err = 1.134 v max error = 2.72 v min error = 0.184
+misses = 0
+
+d = 25
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 15.794 avg v err = 1.425 v max error = 3.614 v min error = 0.658
+misses = 0
+
+d = 26
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 17.158 avg v err = 0.868 v max error = 2.43 v min error = 0.135
+misses = 0
+
+d = 27
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 16.306 avg v err = 0.694 v max error = 2.102 v min error = 0.206
+misses = 0
+
+d = 28
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 15.735 avg v err = 1.334 v max error = 2.564 v min error = 0.206
+misses = 0
+
+d = 29
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 17.579 avg v err = 1.719 v max error = 3.359 v min error = 0.271
+misses = 0
+
+d = 30
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 16.345 avg v err = 0.826 v max error = 2.212 v min error = 0.345
+misses = 0
+
+d = 31
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 16.355 avg v err = 0.84 v max error = 1.786 v min error = 0.197
+misses = 0
+
+d = 32
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 16.573 avg v err = 1.57 v max error = 2.321 v min error = 0.197
+misses = 0
+
+d = 33
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 16.565 avg v err = 1.424 v max error = 2.718 v min error = 0.124
+misses = 0
+
+d = 34
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 16.518 avg v err = 0.869 v max error = 1.9 v min error = 0.483
+misses = 0
+
+d = 35
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 15.751 avg v err = 1.373 v max error = 2.819 v min error = 0.483
+misses = 0
+
+d = 36
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 17.794 avg v err = 1.468 v max error = 2.819 v min error = 0.051
+misses = 0
+
+d = 37
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 15.66 avg v err = 1.34 v max error = 3.19 v min error = 0.617
+misses = 0
+
+d = 38
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 16.171 avg v err = 1.109 v max error = 3.284 v min error = 0.093
+misses = 0
+
+d = 39
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 17.666 avg v err = 0.808 v max error = 1.705 v min error = 0.093
+misses = 0
+
+d = 40
+w = 8
+v = 17
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 15.487 avg v err = 1.591 v max error = 2.918 v min error = 0.391
+misses = 0
+
+d = 25
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.619 avg v err = 0.648 v max error = 1.992 v min error = 0.083
+misses = 0
+
+d = 26
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 19.334 avg v err = 1.657 v max error = 4.182 v min error = 0.738
+misses = 0
+
+d = 27
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.198 avg v err = 1.222 v max error = 3.552 v min error = 0.172
+misses = 0
+
+d = 28
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 19.404 avg v err = 1.369 v max error = 2.591 v min error = 0.172
+misses = 0
+
+d = 29
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.966 avg v err = 0.551 v max error = 1.502 v min error = 0.26
+misses = 0
+
+d = 30
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.107 avg v err = 1.355 v max error = 2.658 v min error = 0.337
+misses = 0
+
+d = 31
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.525 avg v err = 0.745 v max error = 1.578 v min error = 0.337
+misses = 0
+
+d = 32
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.803 avg v err = 1.304 v max error = 3.211 v min error = 0.244
+misses = 0
+
+d = 33
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.807 avg v err = 1.02 v max error = 3.273 v min error = 0.244
+misses = 0
+
+d = 34
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.142 avg v err = 0.919 v max error = 2.79 v min error = 0.152
+misses = 0
+
+d = 35
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.63 avg v err = 0.553 v max error = 1.729 v min error = 0.152
+misses = 0
+
+d = 36
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.256 avg v err = 0.949 v max error = 1.223 v min error = 0.152
+misses = 0
+
+d = 37
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.39 avg v err = 1.123 v max error = 3.843 v min error = 0.061
+misses = 0
+
+d = 38
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.458 avg v err = 1.198 v max error = 3.28 v min error = 0.029
+misses = 0
+
+d = 39
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.612 avg v err = 0.948 v max error = 1.876 v min error = 0.029
+misses = 0
+
+d = 40
+w = 8
+v = 19
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.082 avg v err = 1.494 v max error = 2.483 v min error = 0.771
+misses = 0
+
+d = 25
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 17.677 avg v err = 2.323 v max error = 3.958 v min error = 0.186
+misses = 0
+
+d = 26
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 20.917 avg v err = 2.082 v max error = 5.741 v min error = 0.587
+misses = 0
+
+d = 27
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 19.386 avg v err = 0.876 v max error = 2.348 v min error = 0.379
+misses = 0
+
+d = 28
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 20.548 avg v err = 2.178 v max error = 5.415 v min error = 0.378
+misses = 0
+
+d = 29
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.406 avg v err = 2.073 v max error = 4.086 v min error = 0.475
+misses = 0
+
+d = 30
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 20.565 avg v err = 2.174 v max error = 4.101 v min error = 0.275
+misses = 0
+
+d = 31
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 19.183 avg v err = 0.886 v max error = 2.502 v min error = 0.173
+misses = 0
+
+d = 32
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 19.483 avg v err = 1.276 v max error = 3.206 v min error = 0.57
+misses = 0
+
+d = 33
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 18.855 avg v err = 2.26 v max error = 3.724 v min error = 0.663
+misses = 0
+
+d = 34
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 21.304 avg v err = 2.405 v max error = 4.941 v min error = 0.072
+misses = 0
+
+d = 35
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 19.06 avg v err = 0.94 v max error = 2.064 v min error = 0.028
+misses = 0
+
+d = 36
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 19.435 avg v err = 1.374 v max error = 2.531 v min error = 0.756
+misses = 0
+
+d = 37
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 19.735 avg v err = 1.581 v max error = 4.334 v min error = 0.127
+misses = 0
+
+d = 38
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 19.966 avg v err = 1.65 v max error = 4.634 v min error = 0.651
+misses = 0
+
+d = 39
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 19.387 avg v err = 0.831 v max error = 2.223 v min error = 0.225
+misses = 0
+
+d = 40
+w = 8
+v = 20
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 19.078 avg v err = 1.249 v max error = 2.876 v min error = 0.545
+misses = 0
+
+d = 25
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 22.19 avg v err = 1.506 v max error = 4.076 v min error = 0.455
+misses = 0
+
+d = 26
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 22.755 avg v err = 1.722 v max error = 6.935 v min error = 0.462
+misses = 0
+
+d = 27
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 23.212 avg v err = 1.61 v max error = 6.728 v min error = 0.33
+misses = 0
+
+d = 28
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 21.715 avg v err = 1.653 v max error = 3.741 v min error = 0.33
+misses = 0
+
+d = 29
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 21.091 avg v err = 1.296 v max error = 4.348 v min error = 0.206
+misses = 0
+
+d = 30
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 23.883 avg v err = 2.021 v max error = 6.322 v min error = 0.206
+misses = 0
+
+d = 31
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 20.844 avg v err = 1.366 v max error = 3.083 v min error = 0.691
+misses = 0
+
+d = 32
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 21.698 avg v err = 1.84 v max error = 4.992 v min error = 0.084
+misses = 0
+
+d = 33
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 20.229 avg v err = 1.771 v max error = 3.902 v min error = 0.915
+misses = 0
+
+d = 34
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 24.254 avg v err = 2.62 v max error = 5.928 v min error = 0.915
+misses = 0
+
+d = 35
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 20.407 avg v err = 2.167 v max error = 3.902 v min error = 0.917
+misses = 0
+
+d = 36
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 21.987 avg v err = 0.8 v max error = 2.57 v min error = 0.157
+misses = 0
+
+d = 37
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 20.157 avg v err = 2.0 v max error = 3.984 v min error = 0.787
+misses = 0
+
+d = 38
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 22.808 avg v err = 1.772 v max error = 2.941 v min error = 0.787
+misses = 0
+
+d = 39
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 21.471 avg v err = 2.878 v max error = 5.544 v min error = 0.275
+misses = 0
+
+d = 40
+w = 8
+v = 22
+w est = 0.0 avg w err = 8.0 w max error = 8.0 w min error = 8.0
+v est = 21.188 avg v err = 1.237 v max error = 3.433 v min error = 0.392
+misses = 0
+
+-----------------------------------------
+Maximum error in velocity = 2.87823538675 ft/s
+Maximum error in width = 8.0 ft

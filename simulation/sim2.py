@@ -48,6 +48,13 @@ ANIMATION_ENABLED = 0
 FPS_NUM = 9
 file="sim.txt"
 #The starting Dialogue
+
+def mean_error(estimates, velocity):
+    total = 0
+    for e in estimates:
+        total+= abs(velocity - e)
+        
+    return total/len(estimates)
 class MyDialog(tkSimpleDialog.Dialog):
 
     def body(self, master):
@@ -77,9 +84,9 @@ class MyDialog(tkSimpleDialog.Dialog):
         Label(master, text="FOV (deg):").grid(row=6, sticky = 'e')
         
         self.A2 = Entry(master)
-        self.A2.insert(END, 100)
+        self.A2.insert(END, 105)
         self.A3 = Entry(master)
-        self.A3.insert(END, 140)
+        self.A3.insert(END, 130)
         self.FOV = Entry(master)
         self.FOV.insert(END, 2.0)
         
@@ -93,25 +100,25 @@ class MyDialog(tkSimpleDialog.Dialog):
         Label(master, text="FPS:").grid(row=10, sticky='e')
         
         self.D1 = Entry(master)
-        self.D1.insert(END, 20)
+        self.D1.insert(END, 30)
         self.D2 = Entry(master)
-        self.D2.insert(END, 30)
+        self.D2.insert(END, 40)
         self.D3 = Entry(master)
         self.D3.insert(END, 1)
         self.V1 = Entry(master)
-        self.V1.insert(END, 10)
+        self.V1.insert(END, 15)
         self.V2 = Entry(master)
-        self.V2.insert(END, 58)
+        self.V2.insert(END, 15)
         self.V3 = Entry(master)
         self.V3.insert(END, 1)
         self.W1 = Entry(master)
-        self.W1.insert(END, 1)
+        self.W1.insert(END, 17)
         self.W2 = Entry(master)
-        self.W2.insert(END, 1)
+        self.W2.insert(END, 17)
         self.W3 = Entry(master)
         self.W3.insert(END, 1)
         self.FPS = Entry(master)
-        self.FPS.insert(END, 60) #unlocked FLIR MUON
+        self.FPS.insert(END, 9) #unlocked FLIR MUON
         
         self.D1.grid(row=7, column = 1)
         self.D2.grid(row=7, column = 2)
@@ -321,6 +328,8 @@ class test_obj:
       self.crossing_width = 2*length_1 - 2*(self.distance/tan_1)   #distance the object is within the sensor region (not taking into account sensor cones)
       self.canvas_cones = []
       self.velocity_estimate = []
+      self.delta_14 = []
+      self.delta_23 = []
       self.width_estimate = []
       self.sensor_misses = 0
       if angle_1 < (math.pi / 2):
@@ -353,7 +362,7 @@ class test_obj:
       
       #determining the noise in the detection cone
       distance = self.sensor_1_x2 - self.sensor_1_x1
-      print self.sensor_1_x1 , ', ', self.sensor_1_x2
+      #print self.sensor_1_x1 , ', ', self.sensor_1_x2
       if(NOISE_ENABLED == 1):
          #the point of detection within this cone (exponential distribution - adjust number, currently ~1% miss, mean is 1/4 of cone)
          delay_1 = random.expovariate(6/distance)
@@ -458,7 +467,6 @@ class test_obj:
       #sensor 1
       self.sensor_1_x1 = -length_1 + (self.distance/math.tan(angle_1 + fov/2))
       self.sensor_1_x2 = -length_1 + (self.distance/math.tan(angle_1 - fov/2))
-      
       #determining the noise in the detection cone
       distance = self.sensor_1_x2 - self.sensor_1_x1
       if(NOISE_ENABLED == 1):
@@ -629,9 +637,9 @@ class test_obj:
          subtract_coefficient = equation_1_coefficient - equation_2_coefficient
          if subtract_coefficient != 0:
             self.distance_estimate_1 = subtract_left/subtract_coefficient
-            self.velocity_estimate_1 = equation_1_left - equation_1_coefficient*self.distance_estimate_1
+            self.velocity_estimate.append(equation_1_left - equation_1_coefficient*self.distance_estimate_1)
             #self.velocity_estimate_1 = mean([equation_1_left - equation_1_coefficient*self.distance_estimate_1, equation_2_left - equation_2_coefficient*self.distance_estimate_1])
-         
+      '''   
       #edge crossing equations - very inaccurate, currently does not use
       time_difference_1_2 = abs(avg_time_2 - avg_time_1)
       time_difference_3_4 = abs(avg_time_4 - avg_time_3)
@@ -669,6 +677,7 @@ class test_obj:
          self.distance_estimate.append(self.distance_estimate_2)
       else:
          self.distance_estimate.append(-1)
+      '''
          
          
    def velocity_calc_2(self, avg_time_1, avg_time_2, avg_time_3, avg_time_4):
@@ -677,6 +686,10 @@ class test_obj:
       time_difference_2_3 = abs(avg_time_3 - avg_time_2)
       tan_1 = math.tan(angle_1 - math.pi/2)
       tan_2 = math.tan(angle_2 - math.pi/2)
+      #print 'Time difference: '
+      #print time_difference_1_4, time_difference_2_3
+      self.delta_14.append(time_difference_1_4);
+      self.delta_23.append(time_difference_2_3);
       if time_difference_1_4 != 0 and time_difference_2_3 != 0:
          equation_1_left = (length_1 + length_4)/time_difference_1_4
          equation_2_left = (length_2 + length_3)/time_difference_2_3
@@ -767,7 +780,8 @@ class test_obj:
             flag = 4
          if count == 2:
             other = sum - flag
-            self.estimate_avg_distance(other, flag)
+            self.velocity_estimate.append(-1)
+            #self.estimate_avg_distance(other, flag)
          elif count == 1:
             self.fix_times(flag)
             if (360*angle_1)/(2*math.pi) < 90:
@@ -807,8 +821,9 @@ class test_obj:
       width_guess = 0
       if len(deltas) >= 1:
          width_guess = min(deltas)*self.velocity_estimate[i]
-      if self.velocity_estimate[i] == -1:
+      else:# self.velocity_estimate[i] == -1:
          self.width_estimate.append(-1)
+      '''
       elif width_guess == 0:
          s1 = abs(self.distance_estimate/math.tan(angle_1 + (fov/2)) - self.distance_estimate/math.tan(angle_1 - (fov/2)))
          cones.append(s1)
@@ -824,6 +839,7 @@ class test_obj:
          self.width_estimate.append(max(cones))
       else:
          self.width_estimate.append(width_guess)
+      '''
 def closest(value, values):
    delta = 10000
    ret = 0
@@ -863,11 +879,12 @@ def test_func(canvas, master):
    for v in range(v_low, v_high+1, v_step):
       for w in range(w_low, w_high+1, w_step):
          for d in range(d_low, d_high+1, d_step):
-            my_obj = test_obj(canvas, d, v, w)
+            my_obj = test_obj(canvas, d, int(v*1.46667), w)
             if ANIMATION_ENABLED == 1:
                my_obj.remove()
-            v_err = abs(mean(my_obj.velocity_estimate) - my_obj.velocity)
+            v_err = mean_error(my_obj.velocity_estimate, my_obj.velocity)
             w_err = abs(mean(my_obj.width_estimate) - my_obj.width)
+            #print "DT14: ", mean(my_obj.delta_14), ' DT23: ', mean(my_obj.delta_23)
             #print 'Global Lists'
             #print my_obj.velocity_estimate
             #print my_obj.width_estimate
@@ -899,7 +916,9 @@ def test_func(canvas, master):
    if LOG_ENABLED:
       f_h.close()
       processSim.process()
+   
    thread.exit()
+   
    
    
    

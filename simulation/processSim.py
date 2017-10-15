@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 def process():
    fh = open('V.txt', 'r')
    distance = []
@@ -85,7 +86,15 @@ def process():
    M = 0
    V_M = 0
    V_S = 2000
-   for v_e, v, v_m, v_s in zip(v_err, velocity, v_max, v_min):
+   #print 'velocity =', width,'\navg_err = ',v_err, '\n', 'max_err = ', v_max, '\n', 'min_err = ', v_min, '\n'
+   '''
+   plt.figure(1)
+   plt.plot(velocity, v_err, 'b')
+   plt.plot(velocity, v_min, 'g')
+   plt.plot(velocity, v_max, 'r')
+   plt.show();
+   '''
+   for v_e, v, v_m, v_s in zip(v_err, velocity, v_max, v_min, ):
       total += float(v_e)
       if float(v_e) > M:
         M = float(v_e)
@@ -93,17 +102,18 @@ def process():
          V_M = float(v_m)
       if float(v_s) < V_S:
          V_S = float(v_s)
-      if float(v_m) > 0.2*int(v):
+      if float(v_e) > 0.2*int(v):
          count_2 += 1
    
-   for v_e, v in zip(v_max, velocity):
-      if float(v_e) > 0.1*int(v):
+   for v_e, v in zip(v_err, velocity):
+      if float(v_e) > 0.15*int(v):
          count_1 += 1
+   
    print "Velocity"
    print "Average Error: ", total / float(len(v_err))
    print "Minimum Error: ", V_S
    print "Max Average Error: ", M, '\nMax Error ', V_M
-   print "Average Above 10% error: ", count_1 / float(len(v_err))
+   print "Average Above 15% error: ", count_1 / float(len(v_err))
    print "Average Above 20% error: ", count_2 / float(len(v_err))
    
    count_1 = 0
@@ -128,4 +138,5 @@ def process():
    print "Minimum Error: ", W_S
    print "Max Average Error: ", M, '\nMax Error ', W_M
    print "Average Above 25% error: ", count_1 / float(len(w_err))
+   
    
