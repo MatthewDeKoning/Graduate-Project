@@ -1,9 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-with open('outdoor3.txt') as f:
+with open('T_20_15_cutoff_L.txt') as f:
    lines = f.readlines()
-DataSize = 400
+DataSize = len(lines)/(4*36) + 1
 Data = np.zeros((4,6,6,DataSize))
 means = np.zeros((4, 6, 6, DataSize))
 alert = np.zeros((4, 6, 6, DataSize))
