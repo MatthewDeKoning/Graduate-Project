@@ -1,0 +1,8 @@
+Simulation Parameters
+Distance Range (ft): 20 min, 30 max, 1 step
+Velocity Range (ft/s): 10 min, 20 max, 1 step
+Width Range (ft): 5 min, 10 max, 1 step
+L1 (ft): 5.0 L2: 1.0 L3: 1.0 L4: 5.0
+A1 (degrees): 100.0 A2: 130.0 A3: 130.0 A4: 100.0
+FPS 9
+-----------------------------------------
