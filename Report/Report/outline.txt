@@ -1,0 +1,42 @@
+Introduction MOSTLY DONE
+
+*Project Overview and purpose
+*goals
+
+*basic equations and concepts
+*overview of methods used
+
+Simulation DONE
+* methods used
+* simulating perfect time
+* simulating perfect detection
+* noise additions
+* results
+* use in crafting test vectors
+
+Test Setup MOSTLY DONE
+* sensor tradeoff write up
+* raspberry pi used for simplicity
+* the cases NEED TO DO
+* FLIR v3 firmware
+
+Algorithms Used
+* detection
+* estimation
+
+Test Writeups and Results
+* First test writeup DONE
+* calibration tests
+* second test writeup - to be made
+* challenges
+
+Post Processing
+* changes to the algorithm
+* attempts to tune data to produce correct outputs
+
+
+Regrets/Future Work (CURRENTLY SPRINKLED THROUGHOUT)
+*higher framerate/sampling rate 
+*sync sampling
+*scaled down test with PIR sensors? 
+*more accurate gathered data could probably be manipulated correctly. 
